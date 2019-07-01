@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        #contain{
+            width:400px;
+            margin :100px auto;
+        }
+        #contain ul{
+            height:30px;
+        }
+        li{
+            list-style: none;
+            float: left;
+            height:30px;
+            width :120px;
+            line-height: 30px;
+            text-align: center ;
+            margin-right:10px;
+            background: #ccc;
+            color:#fff;
+        }
+        #contain div{
+            border-top:1px solid  #000 ;
+            height:400px;
+            width:400px;
+            float:left;
+            position :absolute;
+            background: #ccc;
+        }
+        .index {
+            background: black ;
+        }
+        .show{
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="contain">
+        <ul>
+            <li class="index" >111</li>
+            <li>222</li>
+            <li>333</li>
+        </ul>
+        <div class="show">aaaa</div>
+        <div>bbbb</div>
+        <div>cccc</div>
+    </div>
+    <script>
+        var aLi=document.getElementsByTagName ('li');
+        for(var i=0;i<li.length ;i++) {
+            aLi.onclick=function(){
+                for(var j=0;j<i;j++){
+                    aLi.
+                }
+            }
+        }
+    </script>
+</body>
+</html>
