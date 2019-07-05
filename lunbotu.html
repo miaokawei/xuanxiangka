@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container  img{
+            width:500px;
+            height: 400px;
+            position:absolute;
+            display: none;
+
+        }
+        li{
+            list-style: none ;
+        }
+        #container  {
+            width:500px;
+            height: 400px;
+            margin:100px auto;
+            position:relative;
+         }
+        #container  li,#container span{
+            width:20px;
+            height:20px;
+            color: white;
+            text-align: center ;
+            line-height: 20px;
+            margin-right: 5px;
+            float: left;
+            background: black ;
+         }
+        #container .list{
+            position:absolute;
+            right: 10px;
+            bottom:10px;
+         }
+         #container .arrow {
+             position:absolute;
+             left:10px;
+             bottom:10px;
+         }
+        #container .selected {
+            background: orange ;
+        }
+        #container .imgs .show {
+            display:block;
+        }
+
+
+
+</style>
+</head>
+<body>
+    <div id="container" >
+        <div class="imgs" >
+            <img class="show"  src="img/1.jpg " alt="">
+            <img src="img/2.jpg " alt="">
+            <img src="img/3.jpg " alt="">
+            <img src="img/4.jpg " alt="">
+        </div>
+        <ul class="list">
+            <li class="selected">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+        <div class="arrow" >
+            <span id="zuo">&lt;</span>
+            <span class="selected" id="you">&gt;</span>
+        </div>
+    </div>
+    <script>
+        var aLi=document .getElementsByTagName ('li');
+        var aImg=document .getElementsByTagName ('img');
+        var oZuo=document .getElementById('zuo');
+        var oYou=document .getElementById('you');
+        for(var i=0;i<aLi.length ;i++) {
+            aLi[i].index=i;
+            aLi[i] .onmouseover =function(){
+                for(var j=0;j<aLi.length ;j++){
+                    aLi[j].className ='';
+                    aImg [j].className ='';
+                }
+                this.className='selected';
+                aImg[this.index].className ='show';
+            }
+        }
+        var now=0;
+        oYou .onclick =function () {
+            
+        }
+
+    </script>
+</body>
+</html>
